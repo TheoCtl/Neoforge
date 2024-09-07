@@ -7,15 +7,22 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 public class ModItemStateProvider extends ItemModelProvider {
-    public ModItemStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+    public ModItemStateProvider(PackOutput output,  ExistingFileHelper existingFileHelper) {
         super(output, XCraft.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
         item(ItemInit.XGENE.get());
+        item(ItemInit.RAW_EXAMPLE.get());
+
+        item(ItemInit.HELMET.get());
+        item(ItemInit.CHESTPLATE.get());
+        item(ItemInit.LEGGINGS.get());
+        item(ItemInit.BOOTS.get());
     }
 
     private void item(Item item) {
@@ -25,7 +32,7 @@ public class ModItemStateProvider extends ItemModelProvider {
                 .texture("layer0", "item/" + name);
     }
 
-    private String getItemName(Item item) {
+    private @NotNull String getItemName(Item item) {
         return BuiltInRegistries.ITEM.getKey(item).toString().replace(XCraft.MOD_ID + ":", "");
     }
 }
