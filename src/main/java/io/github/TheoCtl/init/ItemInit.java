@@ -12,6 +12,8 @@ public class ItemInit {
 
     public static final DeferredItem<Item> XGENE = ITEMS.register("xgene", () -> new Item(new Item.Properties()));
 
+    public static DeferredItem<Item> ANGEL = ITEMS.register("angel", () -> new angel(ArmorItem.Type.HELMET, 1000));
+    public static DeferredItem<Item> BEAST = ITEMS.register("beast", () -> new beast(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> CYCLOPS = ITEMS.register("cyclops", () -> new cyclops(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> ICEMAN = ITEMS.register("iceman", () -> new iceman(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> PHOENIX = ITEMS.register("phoenix", () -> new phoenix(ArmorItem.Type.HELMET, 1000));

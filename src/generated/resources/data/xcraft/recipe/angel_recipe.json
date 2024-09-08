@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "A": {
+      "item": "minecraft:feather"
+    },
+    "B": {
+      "item": "minecraft:elytra"
+    },
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "G": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "G#D",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:angel"
+  }
+}

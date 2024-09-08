@@ -5,6 +5,8 @@ import io.github.TheoCtl.armor.wolverine;
 import io.github.TheoCtl.armor.professorx;
 import io.github.TheoCtl.armor.phoenix;
 import io.github.TheoCtl.armor.iceman;
+import io.github.TheoCtl.armor.beast;
+import io.github.TheoCtl.armor.angel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
@@ -30,6 +32,8 @@ public class Events {
             cyclops.handleEffects(player);
             phoenix.handleEffects(player);
             iceman.handleEffects(player);
+            beast.handleEffects(player);
+            angel.handleEffects(player);
         }
     }
 }

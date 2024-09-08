@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "A": {
+      "item": "minecraft:leather"
+    },
+    "B": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "D": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "G": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "G#D",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:beast"
+  }
+}

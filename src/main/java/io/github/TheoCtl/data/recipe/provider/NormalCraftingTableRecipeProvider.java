@@ -84,5 +84,29 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
                 .define('D', Items.BLUE_DYE)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("iceman_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.BEAST.get(), 1)
+                .pattern("AAA")
+                .pattern("G#D")
+                .pattern("BBB")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.LEATHER)
+                .define('B', Items.RABBIT_HIDE)
+                .define('G', Items.BLUE_DYE)
+                .define('D', Items.LIGHT_BLUE_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("beast_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.ANGEL.get(), 1)
+                .pattern("ABA")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.FEATHER)
+                .define('B', Items.ELYTRA)
+                .define('G', Items.WHITE_DYE)
+                .define('D', Items.RED_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("angel_recipe"));
     }
 }
