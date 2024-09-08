@@ -23,6 +23,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addItem(ItemInit.PROFESSORX, "Professor X's Cerebro");
         addItem(ItemInit.CYCLOPS, "Cyclops' Mask");
         addItem(ItemInit.PHOENIX, "Phoenix's Mask");
+        addItem(ItemInit.ICEMAN, "Iceman's Mask");
 
         //Blocks
 

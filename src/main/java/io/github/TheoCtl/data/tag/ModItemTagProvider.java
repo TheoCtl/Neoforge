@@ -25,6 +25,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ItemInit.WOLVERINE.get())
                 .add(ItemInit.PROFESSORX.get())
                 .add(ItemInit.CYCLOPS.get())
-                .add(ItemInit.PHOENIX.get());
+                .add(ItemInit.PHOENIX.get())
+                .add(ItemInit.ICEMAN.get());
     }
 }

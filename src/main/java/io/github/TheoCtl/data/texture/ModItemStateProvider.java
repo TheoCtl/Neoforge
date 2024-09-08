@@ -22,6 +22,7 @@ public class ModItemStateProvider extends ItemModelProvider {
         item(ItemInit.PROFESSORX.get());
         item(ItemInit.CYCLOPS.get());
         item(ItemInit.PHOENIX.get());
+        item(ItemInit.ICEMAN.get());
     }
 
     private void item(Item item) {

@@ -131,4 +131,24 @@ public class ArmorMaterialInit {
             0,
             0
     ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ICEMAN = ARMOR_MATERIALS.register("iceman", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 10);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "iceman")
+                    )
+            ),
+            0,
+            0
+    ));
 }

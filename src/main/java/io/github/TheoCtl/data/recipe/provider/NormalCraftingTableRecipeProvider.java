@@ -73,5 +73,16 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
                 .define('D', Items.YELLOW_DYE)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("phoenix_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.ICEMAN.get(), 1)
+                .pattern("AAA")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.SNOW_BLOCK)
+                .define('G', Items.WHITE_DYE)
+                .define('D', Items.BLUE_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("iceman_recipe"));
     }
 }
