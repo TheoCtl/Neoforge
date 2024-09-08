@@ -23,6 +23,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ItemInit.WOLVERINE.get())
-                .add(ItemInit.PROFESSORX.get());
+                .add(ItemInit.PROFESSORX.get())
+                .add(ItemInit.CYCLOPS.get())
+                .add(ItemInit.PHOENIX.get());
     }
 }

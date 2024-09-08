@@ -20,6 +20,8 @@ public class ModItemStateProvider extends ItemModelProvider {
 
         item(ItemInit.WOLVERINE.get());
         item(ItemInit.PROFESSORX.get());
+        item(ItemInit.CYCLOPS.get());
+        item(ItemInit.PHOENIX.get());
     }
 
     private void item(Item item) {

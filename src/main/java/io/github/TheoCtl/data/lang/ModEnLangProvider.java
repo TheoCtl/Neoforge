@@ -21,6 +21,8 @@ public class ModEnLangProvider extends LanguageProvider {
         // Armor
         addItem(ItemInit.WOLVERINE, "Wolverine's Mask");
         addItem(ItemInit.PROFESSORX, "Professor X's Cerebro");
+        addItem(ItemInit.CYCLOPS, "Cyclops' Mask");
+        addItem(ItemInit.PHOENIX, "Phoenix's Mask");
 
         //Blocks
 

@@ -75,4 +75,60 @@ public class ArmorMaterialInit {
             0,
             0
     ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> CYCLOPS = ARMOR_MATERIALS.register("cyclops", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "cyclops")
+                    )
+
+                    // Creates a new armor texture that will be rendered on top of the previous at:
+                    // - 'assets/mod_id/textures/models/armor/example_layer_1_overlay.png' for the outer texture
+                    // - 'assets/mod_id/textures/models/armor/example_layer_2_overlay.png' for the inner texture (only legs)
+                    // 'true' means that the armor material is dyeable; however, the item must also be added to the 'minecraft:dyeable' tag
+                    // new ArmorMaterial.Layer(
+                    //       ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "example"), "_overlay", true
+                    //)
+            ),
+            0,
+            0
+    ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> PHOENIX = ARMOR_MATERIALS.register("phoenix", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 6);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "phoenix")
+                    )
+
+                    // Creates a new armor texture that will be rendered on top of the previous at:
+                    // - 'assets/mod_id/textures/models/armor/example_layer_1_overlay.png' for the outer texture
+                    // - 'assets/mod_id/textures/models/armor/example_layer_2_overlay.png' for the inner texture (only legs)
+                    // 'true' means that the armor material is dyeable; however, the item must also be added to the 'minecraft:dyeable' tag
+                    // new ArmorMaterial.Layer(
+                    //       ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "example"), "_overlay", true
+                    //)
+            ),
+            0,
+            0
+    ));
 }

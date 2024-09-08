@@ -50,5 +50,28 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
                 .define('D', Items.HEART_OF_THE_SEA)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("professorx_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.CYCLOPS.get(), 1)
+                .pattern("BBB")
+                .pattern("G#W")
+                .pattern("BBB")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('B', Items.QUARTZ)
+                .define('G', Items.YELLOW_DYE)
+                .define('W', Items.RED_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("cyclops_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.PHOENIX.get(), 1)
+                .pattern("BBB")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('B', Items.BLAZE_ROD)
+                .define('A', Items.MAGMA_CREAM)
+                .define('G', Items.GREEN_DYE)
+                .define('D', Items.YELLOW_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("phoenix_recipe"));
     }
 }

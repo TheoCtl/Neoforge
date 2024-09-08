@@ -26,6 +26,7 @@ public class XCraft {
         LootModifierInit.LOOT_MODIFIERS.register(bus);
         ArmorMaterialInit.ARMOR_MATERIALS.register(bus);
 
+
         bus.addListener(DataGenerators::gatherData);
         neoForgeBus.addListener(Events::onPlayerTickEventsPre);
 

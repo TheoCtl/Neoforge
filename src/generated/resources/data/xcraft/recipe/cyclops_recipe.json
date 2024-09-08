@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "B": {
+      "item": "minecraft:quartz"
+    },
+    "G": {
+      "item": "minecraft:yellow_dye"
+    },
+    "W": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "G#W",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:cyclops"
+  }
+}
