@@ -22,7 +22,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     protected void start() {
         add("xgene_from_villager", new AddItemModifier(new LootItemCondition[]{
                 LootTableIdCondition.builder(ResourceLocation.parse("entities/villager")).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build()},
+                LootItemRandomChanceCondition.randomChance(0.25f).build()},
                 ItemInit.XGENE.get()));
     }
 }

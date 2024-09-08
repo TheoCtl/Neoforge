@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "minecraft:yellow_dye"
+    },
+    "J": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "C#J",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:wolverine"
+  }
+}

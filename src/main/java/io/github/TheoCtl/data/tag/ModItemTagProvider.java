@@ -19,20 +19,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        copy(TagsInit.BlockTagsInit.EXAMPLE_BLOCK_TAG, TagsInit.ItemTagsInit.EXAMPLE_BLOCK_TAG);
-
-        copy(TagsInit.BlockTagsInit.EXAMPLE_ORE_TAG, TagsInit.ItemTagsInit.EXAMPLE_ORE_TAG);
-
-        copy(TagsInit.BlockTagsInit.DEEPSLATE_EXAMPLE_ORE_TAG, TagsInit.ItemTagsInit.DEEPSLATE_EXAMPLE_ORE_TAG);
-
         tag(TagsInit.ItemTagsInit.XGENE_TAG).add(ItemInit.XGENE.get());
 
-        tag(TagsInit.ItemTagsInit.EXAMPLE_RAW_TAG).add(ItemInit.RAW_EXAMPLE.get());
-
         tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ItemInit.HELMET.get())
-                .add(ItemInit.CHESTPLATE.get())
-                .add(ItemInit.LEGGINGS.get())
-                .add(ItemInit.BOOTS.get());
+                .add(ItemInit.WOLVERINE.get())
+                .add(ItemInit.PROFESSORX.get());
     }
 }

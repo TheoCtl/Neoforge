@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "minecraft:iron_helmet"
+    },
+    "C": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "D": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "G": {
+      "item": "minecraft:gray_dye"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "G#W",
+    "ACD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:professorx"
+  }
+}

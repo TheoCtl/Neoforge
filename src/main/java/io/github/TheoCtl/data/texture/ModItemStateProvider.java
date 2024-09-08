@@ -17,12 +17,9 @@ public class ModItemStateProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         item(ItemInit.XGENE.get());
-        item(ItemInit.RAW_EXAMPLE.get());
 
-        item(ItemInit.HELMET.get());
-        item(ItemInit.CHESTPLATE.get());
-        item(ItemInit.LEGGINGS.get());
-        item(ItemInit.BOOTS.get());
+        item(ItemInit.WOLVERINE.get());
+        item(ItemInit.PROFESSORX.get());
     }
 
     private void item(Item item) {

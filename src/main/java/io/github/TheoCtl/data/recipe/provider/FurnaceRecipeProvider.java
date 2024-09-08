@@ -22,12 +22,12 @@ public class FurnaceRecipeProvider extends MainModRecipeProvider {
     }
 
     public void build() {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(TagsInit.ItemTagsInit.EXAMPLE_RAW_TAG), RecipeCategory.MISC, ItemInit.XGENE, 0.6f, 300)
-                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.EXAMPLE_RAW_TAG))
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG), RecipeCategory.MISC, ItemInit.XGENE, 0.6f, 300)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("example_item_smelting"));
 
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(TagsInit.ItemTagsInit.EXAMPLE_RAW_TAG), RecipeCategory.MISC, ItemInit.XGENE, 0.6f, 100)
-                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.EXAMPLE_RAW_TAG))
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG), RecipeCategory.MISC, ItemInit.XGENE, 0.6f, 100)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("example_item_blasting"));
     }
 }

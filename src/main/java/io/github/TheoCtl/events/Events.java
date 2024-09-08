@@ -1,6 +1,7 @@
 package io.github.TheoCtl.events;
 
 import io.github.TheoCtl.armor.wolverine;
+import io.github.TheoCtl.armor.professorx;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
@@ -21,7 +22,8 @@ public class Events {
         }
 
         if (level.getServer().getTickCount() % 40 == 5) {
-            wolverine.handleFlightAndEffects(player);
+            wolverine.handleEffects(player);
+            professorx.handleEffects(player);
         }
     }
 }

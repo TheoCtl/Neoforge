@@ -17,58 +17,33 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 
 public class wolverine extends ArmorItem implements IItemExtension {
-    public static final ResourceLocation ENABLE_FLIGHT_RL = ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "enable_flight");
-    public static final AttributeModifier ENABLE_FLIGHT = new AttributeModifier(ENABLE_FLIGHT_RL, 2.0D, AttributeModifier.Operation.ADD_VALUE);
-
     public wolverine(Type type, int durability) {
         super(ArmorMaterialInit.WOLVERINE, type, new Item.Properties().durability(type.getDurability(durability)));
     }
 
-    public static void handleFlightAndEffects(Player player) {
-        ItemStack boots = player.getItemBySlot(EquipmentSlot.FEET);
-        ItemStack leggings = player.getItemBySlot(EquipmentSlot.LEGS);
-        ItemStack chestplate = player.getItemBySlot(EquipmentSlot.CHEST);
+    public static void handleEffects(Player player) {
         ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
 
-        if (player.isCreative() || player.isSpectator() || !player.isAlive()) {
-            return;
-        }
-
-        AttributeInstance attributeInstance = player.getAttribute(NeoForgeMod.CREATIVE_FLIGHT);
-
-        if (attributeInstance == null) {
-            XCraft.logger.error("Failed to get attribute instance for creative flight");
-            return;
-        }
-
-        if (attributeInstance.getValue() == 1.0 && !attributeInstance.hasModifier(ENABLE_FLIGHT_RL)) {
-            return; // Creative flight is enabled, from another source
-        }
-
-        if (isWearingFullSet(boots, leggings, chestplate, helmet)) {
-            if (!attributeInstance.hasModifier(ENABLE_FLIGHT_RL)) {
-                attributeInstance.addTransientModifier(ENABLE_FLIGHT);
-            }
-
+        if (isWearingFullSet(helmet)) {
             if (!player.hasEffect(MobEffects.REGENERATION)) {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 1,
                         false, false, false));
             }
-        } else {
-            if (attributeInstance.hasModifier(ENABLE_FLIGHT_RL)) {
-                attributeInstance.removeModifier(ENABLE_FLIGHT_RL);
+            if (!player.hasEffect(MobEffects.DAMAGE_BOOST)) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 2,
+                        false, false, false));
             }
-
+        } else {
             if (player.hasEffect(MobEffects.REGENERATION)) {
                 player.removeEffect(MobEffects.REGENERATION);
+            }
+            if (player.hasEffect(MobEffects.DAMAGE_BOOST)) {
+                player.removeEffect(MobEffects.DAMAGE_BOOST);
             }
         }
     }
 
-    private static boolean isWearingFullSet(ItemStack boots, ItemStack leggings, ItemStack chestplate, ItemStack helmet) {
-        return boots.getItem() instanceof wolverine &&
-                leggings.getItem() instanceof wolverine &&
-                chestplate.getItem() instanceof wolverine &&
-                helmet.getItem() instanceof wolverine;
+    private static boolean isWearingFullSet(ItemStack helmet) {
+        return helmet.getItem() instanceof wolverine;
     }
 }

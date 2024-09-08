@@ -11,7 +11,8 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,39 +26,29 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
     }
 
     public void build() {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockInit.EXAMPLE_BLOCK.get(), 1)
-                .requires(Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG), 9)
-                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
-                .save(this.recipeOutput, getModId("example_item_block_recipe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.HELMET.get(), 1)
-                .pattern("###")
-                .pattern("# #")
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.WOLVERINE.get(), 1)
+                .pattern("BBB")
+                .pattern("C#J")
+                .pattern("BBB")
                 .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('B', Items.IRON_BLOCK)
+                .define('C', Items.YELLOW_DYE)
+                .define('J', Items.BLUE_DYE)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
-                .save(this.recipeOutput, getModId("example_helmet_recipe"));
+                .save(this.recipeOutput, getModId("wolverine_recipe"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.CHESTPLATE.get(), 1)
-                .pattern("# #")
-                .pattern("###")
-                .pattern("###")
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.PROFESSORX.get(), 1)
+                .pattern("BBB")
+                .pattern("G#W")
+                .pattern("ACD")
                 .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('B', Items.IRON_HELMET)
+                .define('G', Items.GRAY_DYE)
+                .define('W', Items.WHITE_DYE)
+                .define('A', Items.NETHER_STAR)
+                .define('C', Items.TOTEM_OF_UNDYING)
+                .define('D', Items.HEART_OF_THE_SEA)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
-                .save(this.recipeOutput, getModId("example_chestplate_recipe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.LEGGINGS.get(), 1)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("# #")
-                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
-                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
-                .save(this.recipeOutput, getModId("example_leggings_recipe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.BOOTS.get(), 1)
-                .pattern("# #")
-                .pattern("# #")
-                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
-                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
-                .save(this.recipeOutput, getModId("example_boots_recipe"));
+                .save(this.recipeOutput, getModId("professorx_recipe"));
     }
 }

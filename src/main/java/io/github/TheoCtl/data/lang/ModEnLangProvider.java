@@ -17,22 +17,16 @@ public class ModEnLangProvider extends LanguageProvider {
     protected void addTranslations() {
         // Items
         addItem(ItemInit.XGENE, "X-Gene");
-        addItem(ItemInit.RAW_EXAMPLE, "Raw Example");
 
         // Armor
-        addItem(ItemInit.HELMET, "Helmet");
-        addItem(ItemInit.CHESTPLATE, "Chestplate");
-        addItem(ItemInit.LEGGINGS, "Leggings");
-        addItem(ItemInit.BOOTS, "Boots");
+        addItem(ItemInit.WOLVERINE, "Wolverine's Mask");
+        addItem(ItemInit.PROFESSORX, "Professor X's Cerebro");
 
         //Blocks
-        addBlock(BlockInit.EXAMPLE_BLOCK, "Example Block");
 
         // Ores
-        addBlock(BlockInit.EXAMPLE_ORE, "Example Ore");
 
         // Deepslate Ores
-        addBlock(BlockInit.DEEPSLATE_EXAMPLE_ORE, "Deepslate Example Ore");
 
         // others
         add(CreativeModeTabInit.XCRAFT_TAB_ONE_TITLE, "X-Craft");

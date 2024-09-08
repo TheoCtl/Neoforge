@@ -9,7 +9,6 @@ import io.github.TheoCtl.data.tag.ModBlockTagsProvider;
 import io.github.TheoCtl.data.tag.ModItemTagProvider;
 import io.github.TheoCtl.data.texture.ModBlockStateProvider;
 import io.github.TheoCtl.data.texture.ModItemStateProvider;
-import io.github.TheoCtl.data.worldgen.ModWorldGenProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -30,7 +29,6 @@ public class DataGenerators {
             generator.addProvider(true, modBlockTagsProvider);
             generator.addProvider(true, new ModItemTagProvider(output, event.getLookupProvider(), modBlockTagsProvider, existingFileHelper));
             generator.addProvider(true, new ModLootTables(output, event.getLookupProvider()));
-            generator.addProvider(true, new ModWorldGenProvider(output, event.getLookupProvider()));
             generator.addProvider(true, new MainModRecipeProvider(generator, event.getLookupProvider()));
             generator.addProvider(true, new ModGlobalLootModifiersProvider(output, event.getLookupProvider()));
         } catch (RuntimeException e) {

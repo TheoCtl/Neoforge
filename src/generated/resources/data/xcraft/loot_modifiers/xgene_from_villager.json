@@ -1,0 +1,14 @@
+{
+  "type": "xcraft:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/villager"
+    },
+    {
+      "chance": 0.25,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "xcraft:xgene"
+}
