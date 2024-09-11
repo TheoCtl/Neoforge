@@ -30,8 +30,12 @@ public class nightcrawler extends ArmorItem implements IItemExtension {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 0,
                         false, false, false));
             }
-            if (!player.hasEffect(MobEffects.DAMAGE_BOOST)) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 0,
+            if (!player.hasEffect(MobEffects.DAMAGE_RESISTANCE)) {
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 0,
+                        false, false, false));
+            }
+            if (!player.hasEffect(MobEffects.REGENERATION)) {
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 0,
                         false, false, false));
             }
             giveInfiniteEnderpearl(player);
@@ -39,8 +43,11 @@ public class nightcrawler extends ArmorItem implements IItemExtension {
             if (player.hasEffect(MobEffects.MOVEMENT_SPEED)) {
                 player.removeEffect(MobEffects.MOVEMENT_SPEED);
             }
-            if (player.hasEffect(MobEffects.DAMAGE_BOOST)) {
-                player.removeEffect(MobEffects.DAMAGE_BOOST);
+            if (player.hasEffect(MobEffects.DAMAGE_RESISTANCE)) {
+                player.removeEffect(MobEffects.DAMAGE_RESISTANCE);
+            }
+            if (player.hasEffect(MobEffects.REGENERATION)) {
+                player.removeEffect(MobEffects.REGENERATION);
             }
         }
     }

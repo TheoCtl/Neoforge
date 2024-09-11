@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "xcraft:xgene"
+    },
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "minecraft:wind_charge"
+    },
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "G": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "G#D",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "xcraft:storm"
+  }
+}

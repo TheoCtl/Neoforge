@@ -1,9 +1,10 @@
-// 1.21.1	2024-09-11T17:54:51.9375953	Recipes
+// 1.21.1	2024-09-11T18:15:22.3166225	Recipes
 7de13757a842c0b9603180e303825c1674f35174 data/xcraft/advancement/recipes/combat/angel_recipe.json
 180532de10886a232785b07a878c1085a3a9f6a4 data/xcraft/advancement/recipes/combat/beast_recipe.json
 7a2139287089e7aa2b45fe62ab4e35a5bf7faa92 data/xcraft/advancement/recipes/combat/cyclops_recipe.json
 74bf8a82e499a1db65dc85e289f9c3eb3bfaf06b data/xcraft/advancement/recipes/combat/iceman_recipe.json
 79784d7ca1a5474203928b418f42e4fcf23162bd data/xcraft/advancement/recipes/combat/magneto_recipe.json
+f1aea12eb2460e8049607e8bf1010766cae702f8 data/xcraft/advancement/recipes/combat/nightcrawler_recipe.json
 8b0ab304404a1d13a892ad908f098ce8f2051002 data/xcraft/advancement/recipes/combat/phoenix_recipe.json
 bcde01ba58b564c56cfeb3b4b5f144153d6f716f data/xcraft/advancement/recipes/combat/professorx_recipe.json
 770f441861b6bcfc68123cc811f21db9c71cb7f4 data/xcraft/advancement/recipes/combat/storm_recipe.json
@@ -17,6 +18,7 @@ c0bf8deb71f153e8e4586292b3c1497baae9280c data/xcraft/recipe/beast_recipe.json
 fd95f3665db2cf48dc94042c9ff11d9c497a97f1 data/xcraft/recipe/example_item_smelting.json
 95d3bd8f5f2d7ed12b5879032527b003cf18df00 data/xcraft/recipe/iceman_recipe.json
 c243e6f7fb12256f11feb223d45b34175caedb34 data/xcraft/recipe/magneto_recipe.json
+b8f14df4da9fdce10fe9e504b5b042c8ff5472c8 data/xcraft/recipe/nightcrawler_recipe.json
 67cb39d04f22c878c47a81c9ae33145b14a2599d data/xcraft/recipe/phoenix_recipe.json
 5818c71ea6e3bf6680827b011ff58d878379745e data/xcraft/recipe/professorx_recipe.json
 3f48171f6dfdd0568bdfea02a3c1f115e0c28af8 data/xcraft/recipe/storm_recipe.json
