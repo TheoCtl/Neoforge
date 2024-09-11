@@ -210,4 +210,44 @@ public class ArmorMaterialInit {
             0,
             0
     ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> MAGNETO = ARMOR_MATERIALS.register("magneto", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 8);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "magneto")
+                    )
+            ),
+            0,
+            0
+    ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> NIGHTCRAWLER = ARMOR_MATERIALS.register("nightcrawler", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "nightcrawler")
+                    )
+            ),
+            0,
+            0
+    ));
 }

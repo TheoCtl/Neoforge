@@ -27,6 +27,8 @@ public class ModEnLangProvider extends LanguageProvider {
         addItem(ItemInit.BEAST, "Beast's Mask");
         addItem(ItemInit.ANGEL, "Angel's Mask");
         addItem(ItemInit.STORM, "Storm's Mask");
+        addItem(ItemInit.MAGNETO, "Magneto's Helmet");
+        addItem(ItemInit.NIGHTCRAWLER, "Nightcrawler's Helmet");
 
         //Blocks
 

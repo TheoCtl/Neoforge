@@ -120,5 +120,29 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
                 .define('D', Items.WHITE_DYE)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("storm_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.MAGNETO.get(), 1)
+                .pattern("ABA")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.IRON_BLOCK)
+                .define('B', Items.NETHERITE_BLOCK)
+                .define('G', Items.WHITE_DYE)
+                .define('D', Items.BLACK_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("magneto_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.NIGHTCRAWLER.get(), 1)
+                .pattern("ABA")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.ENDER_PEARL)
+                .define('B', Items.IRON_SWORD)
+                .define('G', Items.BLUE_DYE)
+                .define('D', Items.RED_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("nightcrawler_recipe"));
     }
 }
