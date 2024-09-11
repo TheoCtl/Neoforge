@@ -108,5 +108,17 @@ public class NormalCraftingTableRecipeProvider extends MainModRecipeProvider {
                 .define('D', Items.RED_DYE)
                 .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
                 .save(this.recipeOutput, getModId("angel_recipe"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ItemInit.STORM.get(), 1)
+                .pattern("ABA")
+                .pattern("G#D")
+                .pattern("AAA")
+                .define('#', TagsInit.ItemTagsInit.XGENE_TAG)
+                .define('A', Items.GOLD_INGOT)
+                .define('B', Items.WIND_CHARGE)
+                .define('G', Items.BLACK_DYE)
+                .define('D', Items.WHITE_DYE)
+                .unlockedBy("has_item", has(TagsInit.ItemTagsInit.XGENE_TAG))
+                .save(this.recipeOutput, getModId("storm_recipe"));
     }
 }

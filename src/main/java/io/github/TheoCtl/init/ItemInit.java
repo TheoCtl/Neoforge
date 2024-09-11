@@ -18,5 +18,6 @@ public class ItemInit {
     public static DeferredItem<Item> ICEMAN = ITEMS.register("iceman", () -> new iceman(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> PHOENIX = ITEMS.register("phoenix", () -> new phoenix(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> PROFESSORX = ITEMS.register("professorx", () -> new professorx(ArmorItem.Type.HELMET, 1000));
+    public static DeferredItem<Item> STORM = ITEMS.register("storm", () -> new storm(ArmorItem.Type.HELMET, 1000));
     public static DeferredItem<Item> WOLVERINE = ITEMS.register("wolverine", () -> new wolverine(ArmorItem.Type.HELMET, 1000));
 }

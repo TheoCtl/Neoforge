@@ -25,6 +25,7 @@ public class ModItemStateProvider extends ItemModelProvider {
         item(ItemInit.ICEMAN.get());
         item(ItemInit.BEAST.get());
         item(ItemInit.ANGEL.get());
+        item(ItemInit.STORM.get());
     }
 
     private void item(Item item) {

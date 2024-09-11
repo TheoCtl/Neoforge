@@ -30,7 +30,7 @@ public class wolverine extends ArmorItem implements IItemExtension {
                         false, false, false));
             }
             if (!player.hasEffect(MobEffects.DAMAGE_BOOST)) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 2,
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, XCraftUtils.getTimeInTicks(1, XCraftUtils.TimeUnit.MINUTES), 1,
                         false, false, false));
             }
         } else {

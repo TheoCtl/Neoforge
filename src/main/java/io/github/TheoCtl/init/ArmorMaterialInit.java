@@ -4,7 +4,6 @@ import io.github.TheoCtl.XCraft;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -25,7 +24,7 @@ public class ArmorMaterialInit {
                 map.put(ArmorItem.Type.BOOTS, 2);
                 map.put(ArmorItem.Type.LEGGINGS, 4);
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
-                map.put(ArmorItem.Type.HELMET, 7);
+                map.put(ArmorItem.Type.HELMET, 8);
                 map.put(ArmorItem.Type.BODY, 4);
             }),
             15,
@@ -186,6 +185,26 @@ public class ArmorMaterialInit {
             List.of(
                     new ArmorMaterial.Layer(
                             ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "angel")
+                    )
+            ),
+            0,
+            0
+    ));
+
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> STORM = ARMOR_MATERIALS.register("storm", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), (Map<ArmorItem.Type, Integer> map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 4);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 6);
+                map.put(ArmorItem.Type.BODY, 4);
+            }),
+            15,
+            SoundEvents.ARMOR_EQUIP_GENERIC,
+            () -> Ingredient.of(TagsInit.ItemTagsInit.XGENE_TAG),
+            List.of(
+                    new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(XCraft.MOD_ID, "storm")
                     )
             ),
             0,
